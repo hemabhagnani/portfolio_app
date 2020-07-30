@@ -7,8 +7,14 @@ void main() {
   ));
 }
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   // This widget is the root of your application.
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,11 +81,16 @@ class Home extends StatelessWidget {
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(0.0),
-                  child: IconButton(icon: Icon(Icons.add_box, color: Colors.indigo[900],), onPressed: () {}),
+                  child: IconButton(icon: Icon(Icons.add_box, color: Colors.indigo[900],),
+                      onPressed: () {
+                    setState(() {
+                      counter++;
+                    });
+                      }),
                 ),
                 SizedBox(width: 0.0),
                 Text(
-                  "5",
+                  "$counter",
                   style: TextStyle(
                     color: Colors.black,
                     letterSpacing: 1.0,
