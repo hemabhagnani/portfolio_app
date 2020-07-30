@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
               ],
             ),
             Divider(
-              height: 70.0,
+              height: 10.0,
               color: Colors.black,
             ),
             Text(
@@ -60,6 +60,35 @@ class Home extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16.0),
+            Text(
+              "Number of Git Repositories",
+              style:TextStyle(
+                color: Colors.black,
+                letterSpacing: 1.0,
+              ),
+
+            ),
+            SizedBox(height: 0.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(0.0),
+                  child: IconButton(icon: Icon(Icons.add_box, color: Colors.indigo[900],), onPressed: () {}),
+                ),
+                SizedBox(width: 0.0),
+                Text(
+                  "5",
+                  style: TextStyle(
+                    color: Colors.black,
+                    letterSpacing: 1.0,
+                    fontSize: 20.0,
+                  ),
+                ),
+              ],
+            ),
+
             Row(
               children: <Widget>[
                 Icon(Icons.mail),
